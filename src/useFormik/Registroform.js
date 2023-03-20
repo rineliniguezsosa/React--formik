@@ -1,6 +1,9 @@
 import { useFormik } from 'formik'
 
 export const Registroform = () => {
+    const formik = useFormik({
+        
+    })
   return (
     <>
     <form style={{width:'50%'}}>
