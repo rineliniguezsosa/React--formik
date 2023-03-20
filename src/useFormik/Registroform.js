@@ -6,6 +6,9 @@ export const Registroform = () => {
             nombre:'',
             email:'',
             password:''
+        },
+        onSubmit:(values)=>{
+            console.log("Datos: ",values)
         }
     })
 
