@@ -12,7 +12,7 @@ export const Registroform = () => {
     console.log(formik.values)
   return (
     <>
-    <form style={{width:'50%'}}>
+    <form onSubmit={formik.handleSubmit} style={{width:'50%'}}>
         <div className="mb-3">
             <input placeholder="Nombre" 
             name="nombre" 
