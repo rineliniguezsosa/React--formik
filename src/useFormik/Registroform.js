@@ -8,6 +8,8 @@ export const Registroform = () => {
             password:''
         }
     })
+
+    console.log(formik.values)
   return (
     <>
     <form style={{width:'50%'}}>
