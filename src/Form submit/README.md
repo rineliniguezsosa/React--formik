@@ -7,3 +7,31 @@
     </li>
     <li>agregamos la prop onSubmit el cual devolvera una fucnion donde recibira values como los datos enviados del formulario</li>
 </ol>
+
+
+```js
+import { useFormik } from 'formik'
+
+export const Registroform = () => {
+    const formik = useFormik({ 
+        initialValues:{ 
+            nombre:'',
+            email:'',
+            password:''
+        },
+        onSubmit:(values)=>{
+            console.log("Datos: ",values)
+        }
+    })
+
+    console.log(formik.values)
+  return (
+    <>
+    <form onSubmit={formik.handleSubmit} style={{width:'50%'}}>
+       
+    </form>
+    </>
+  )
+}
+
+```
