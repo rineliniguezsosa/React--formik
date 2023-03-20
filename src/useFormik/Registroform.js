@@ -1,8 +1,8 @@
 import { useFormik } from 'formik'
 
 export const Registroform = () => {
-    const formik = useFormik({
-        
+    const formik = useFormik({ //definimos el hook useFormik para gestionar el state del formulario
+
     })
   return (
     <>
