@@ -6,7 +6,7 @@ import { Registroform } from './useFormik/Registroform';
 function App() {
   return (
     <div className="App">
-     
+        <Registroform></Registroform>
     </div>
   );
 }
