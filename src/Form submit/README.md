@@ -19,7 +19,7 @@ export const Registroform = () => {
             email:'',
             password:''
         },
-        onSubmit:(values)=>{
+        onSubmit:(values)=>{ //2)
             console.log("Datos: ",values)
         }
     })
@@ -27,7 +27,7 @@ export const Registroform = () => {
     console.log(formik.values)
   return (
     <>
-    <form onSubmit={formik.handleSubmit} style={{width:'50%'}}>
+    <form onSubmit={formik.handleSubmit} style={{width:'50%'}}> //1)
        
     </form>
     </>
