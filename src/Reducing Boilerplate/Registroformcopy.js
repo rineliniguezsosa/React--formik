@@ -24,9 +24,8 @@ export const Registroformcopy = () => {
     <Form  style={{width:'50%'}}>
         <div>
         <div className="mb-3">
-            <input placeholder="Nombre" 
+            <Field placeholder="Nombre" 
             name="nombre" 
-            {...formik.getFieldProps('nombre')}
             type="text" 
             className="form-control" 
             id="nombre" />
