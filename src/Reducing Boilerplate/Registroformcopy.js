@@ -46,7 +46,7 @@ export const Registroformcopy = () => {
             placeholder='password' 
             className="form-control" 
             id="password"/>
-            {formik.touched.password && formik.errors.password ? <div style={{color:'red',fontSize:'10px'}}>{formik.errors.password}</div>: null}
+            <ErrorMessage name="password"></ErrorMessage>
         </div>
         <button type="submit" className="btn btn-primary">Submit</button>
     </form>
