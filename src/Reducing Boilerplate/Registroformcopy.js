@@ -26,9 +26,7 @@ export const Registroformcopy = () => {
         <div className="mb-3">
             <input placeholder="Nombre" 
             name="nombre" 
-            onChange={formik.handleChange} 
-            value={formik.values.nombre} 
-            onBlur={formik.handleBlur}
+            {...formik.getFieldProps('nombre')}
             type="text" 
             className="form-control" 
             id="nombre" />
