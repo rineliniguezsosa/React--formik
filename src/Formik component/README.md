@@ -12,21 +12,21 @@
 </ol>
 
 ```js
-import { Formik } from 'formik'
+import { Formik } from 'formik' //1)
  import * as Yup from 'yup';
 
 export const Registroformcopy = () => {
-    const initialValues = {
+    const initialValues = { //3)
         nombre:'',
         email:'',
         password:''
     }
 
-    const onSubmit = (values)=> {
+    const onSubmit = (values)=> { //4)
         console.log("Datos: ",values)
     }
 
-    const validationSchema = Yup.object({
+    const validationSchema = Yup.object({ //5)
         nombre: Yup.string().required('requerido!'),
         email:Yup.string().email('Un email valido').required('requerido!'),
         password:Yup.string().required('requerido!')
@@ -34,12 +34,13 @@ export const Registroformcopy = () => {
     
     console.log(formik.touched)
   return (
-    <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
+    <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}> 
+    // 6)
     <form onSubmit={formik.handleSubmit} style={{width:'50%'}}>
        
-       
+
     </form>
-    </Formik>
+    </Formik> //2)
   )
 }
 
