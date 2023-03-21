@@ -42,11 +42,10 @@ export const Registroformcopy = () => {
             {formik.touched.email && formik.errors.email ? <div style={{color:'red',fontSize:'10px'}}>{formik.errors.email}</div>: null}
         </div>
         <div className="mb-3">
-            <input type="password" 
+            <Field type="password" 
             name="password" 
             placeholder='password' 
             className="form-control" 
-            {...formik.getFieldProps('password')}
             id="password"/>
             {formik.touched.password && formik.errors.password ? <div style={{color:'red',fontSize:'10px'}}>{formik.errors.password}</div>: null}
         </div>
