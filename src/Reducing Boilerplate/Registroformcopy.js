@@ -2,27 +2,25 @@ import { Formik } from 'formik'
  import * as Yup from 'yup';
 
 export const Registroformcopy = () => {
+    const initialValues = {
+        nombre:'',
+        email:'',
+        password:''
+    }
 
-    const formik = useFormik({
-        initialValues:{ 
-            nombre:'',
-            email:'',
-            password:''
-        },
-        onSubmit:(values)=>{
-            console.log("Datos: ",values)
-        },
-        //validate,
-        validationSchema: Yup.object({
-            nombre: Yup.string().required('requerido!'),
-            email:Yup.string().email('Un email valido').required('requerido!'),
-            password:Yup.string().required('requerido!')
-        })
+    const onSubmit = (values)=> {
+        console.log("Datos: ",values)
+    }
+
+    const validationSchema = Yup.object({
+        nombre: Yup.string().required('requerido!'),
+        email:Yup.string().email('Un email valido').required('requerido!'),
+        password:Yup.string().required('requerido!')
     })
-
+    
     console.log(formik.touched)
   return (
-    <Formik>
+    <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
     <form onSubmit={formik.handleSubmit} style={{width:'50%'}}>
         <div>
         <div className="mb-3">
