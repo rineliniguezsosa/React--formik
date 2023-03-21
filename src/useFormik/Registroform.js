@@ -25,7 +25,8 @@ export const Registroform = () => {
         //validate,
         validationSchema: Yup.object({
             nombre: Yup.string().required('requerido!'),
-            email:Yup.string().email('Un email valido').required('requerido!')
+            email:Yup.string().email('Un email valido').required('requerido!'),
+            password:Yup.string().required('requerido!')
         })
     })
 
