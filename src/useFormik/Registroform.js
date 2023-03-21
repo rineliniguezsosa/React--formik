@@ -54,6 +54,7 @@ export const Registroform = () => {
             onChange={formik.handleChange} 
             value={formik.values.email}
             id="email"/>
+            {formik.touched.email && formik.errors.email ? <div style={{color:'red',fontSize:'10px'}}>{formik.errors.email}</div>: null}
         </div>
         <div className="mb-3">
             <input type="password" 
