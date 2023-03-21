@@ -24,7 +24,7 @@ export const Registroform = () => {
         validate
     })
 
-    console.log(formik.errors)
+    console.log(formik.touched)
   return (
     <>
     <form onSubmit={formik.handleSubmit} style={{width:'50%'}}>
