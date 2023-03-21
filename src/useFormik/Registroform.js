@@ -24,7 +24,8 @@ export const Registroform = () => {
         },
         //validate,
         validationSchema: Yup.object({
-            nombre: Yup.string().required('requerido!')
+            nombre: Yup.string().required('requerido!'),
+            email:Yup.string().email('Un email valido').required('requerido!')
         })
     })
 
@@ -53,7 +54,6 @@ export const Registroform = () => {
             onChange={formik.handleChange} 
             value={formik.values.email}
             id="email"/>
-            
         </div>
         <div className="mb-3">
             <input type="password" 
