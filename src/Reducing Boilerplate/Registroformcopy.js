@@ -18,7 +18,7 @@ export const Registroformcopy = () => {
         password:Yup.string().required('requerido!')
     })
     
-    console.log(formik.touched)
+    //console.log(formik.touched)
   return (
     <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
     <Form  style={{width:'50%'}}>
@@ -34,7 +34,7 @@ export const Registroformcopy = () => {
         </div>
         <div className="mb-3">
             <Field placeholder='email' 
-            nombre="email" 
+            name="email" 
             type="email" 
             className="form-control" 
             id="email"/>
