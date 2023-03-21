@@ -38,8 +38,7 @@ export const Registroformcopy = () => {
             nombre="email" 
             type="email" 
             className="form-control" 
-            onChange={formik.handleChange} 
-            value={formik.values.email}
+            {...formik.getFieldProps('email')}
             id="email"/>
             
         </div>
