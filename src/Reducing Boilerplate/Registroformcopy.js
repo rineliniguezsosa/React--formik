@@ -1,4 +1,4 @@
-import { Formik,Form } from 'formik'
+import { Formik,Form,Field } from 'formik'
  import * as Yup from 'yup';
 
 export const Registroformcopy = () => {
