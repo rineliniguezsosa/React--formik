@@ -49,7 +49,7 @@ export const Registroformcopy = () => {
             <ErrorMessage name="password"></ErrorMessage>
         </div>
         <button type="submit" className="btn btn-primary">Submit</button>
-    </form>
+    </Form>
     </Formik>
   )
 }
