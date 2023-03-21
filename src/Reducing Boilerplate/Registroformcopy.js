@@ -38,7 +38,7 @@ export const Registroformcopy = () => {
             type="email" 
             className="form-control" 
             id="email"/>
-            {formik.touched.email && formik.errors.email ? <div style={{color:'red',fontSize:'10px'}}>{formik.errors.email}</div>: null}
+            <ErrorMessage name="email"></ErrorMessage>
         </div>
         <div className="mb-3">
             <Field type="password" 
