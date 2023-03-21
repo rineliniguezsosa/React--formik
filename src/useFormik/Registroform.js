@@ -38,7 +38,7 @@ export const Registroform = () => {
             type="text" 
             className="form-control" 
             id="nombre" />
-            {formik.errors.nombre ? <div style={{color:'red',fontSize:'10px'}}>{formik.errors.nombre}</div>: null}
+            {formik.touched.nombre && formik.errors.nombre ? <div style={{color:'red',fontSize:'10px'}}>{formik.errors.nombre}</div>: null}
         </div>
         </div>
         <div className="mb-3">
