@@ -29,7 +29,7 @@ export const Registroformcopy = () => {
             type="text" 
             className="form-control" 
             id="nombre" />
-            {formik.touched.nombre && formik.errors.nombre ? <div style={{color:'red',fontSize:'10px'}}>{formik.errors.nombre}</div>: null}
+            <ErrorMessage name="nombre"></ErrorMessage>
         </div>
         </div>
         <div className="mb-3">
