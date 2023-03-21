@@ -11,7 +11,7 @@ export const Registroform = () => {
           
           return errors
     }
-    
+
     const formik = useFormik({ //definimos el hook useFormik para gestionar el state del formulario
         initialValues:{ //inicializamos los valores de los inputs nombre,email mediante la prop initialValues
             nombre:'',
@@ -37,6 +37,7 @@ export const Registroform = () => {
             type="text" 
             className="form-control" 
             id="nombre" />
+            {formik.errors.nombre ? <div style={{color:'red',fontSize:'10px'}}>{formik.errors.nombre}</div>: null}
         </div>
         </div>
         <div className="mb-3">
