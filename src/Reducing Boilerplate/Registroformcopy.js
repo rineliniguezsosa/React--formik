@@ -22,7 +22,7 @@ export const Registroformcopy = () => {
 
     console.log(formik.touched)
   return (
-    <>
+    <Formik>
     <form onSubmit={formik.handleSubmit} style={{width:'50%'}}>
         <div>
         <div className="mb-3">
@@ -55,6 +55,6 @@ export const Registroformcopy = () => {
         </div>
         <button type="submit" className="btn btn-primary">Submit</button>
     </form>
-    </>
+    </Formik>
   )
 }
