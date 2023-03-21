@@ -1,6 +1,17 @@
 import { useFormik } from 'formik'
 
 export const Registroform = () => {
+
+    const validate = (values) =>{
+          let errors = {}
+        
+          if(!values.nombre){
+              errors.nombre = "El nombre es requerido"
+          }
+          
+          return errors
+    }
+    
     const formik = useFormik({ //definimos el hook useFormik para gestionar el state del formulario
         initialValues:{ //inicializamos los valores de los inputs nombre,email mediante la prop initialValues
             nombre:'',
