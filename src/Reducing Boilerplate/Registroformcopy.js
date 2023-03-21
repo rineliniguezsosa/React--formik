@@ -49,6 +49,7 @@ export const Registroformcopy = () => {
             className="form-control" 
             {...formik.getFieldProps('password')}
             id="password"/>
+            {formik.touched.password && formik.errors.password ? <div style={{color:'red',fontSize:'10px'}}>{formik.errors.password}</div>: null}
         </div>
         <button type="submit" className="btn btn-primary">Submit</button>
     </form>
