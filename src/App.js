@@ -1,4 +1,5 @@
 import './App.css';
+import { Registroformcopy } from './Reducing Boilerplate/Registroformcopy';
 import { Registroform } from './useFormik/Registroform';
 
 
