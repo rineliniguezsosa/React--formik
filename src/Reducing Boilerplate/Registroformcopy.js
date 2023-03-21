@@ -29,7 +29,7 @@ export const Registroformcopy = () => {
             type="text" 
             className="form-control" 
             id="nombre" />
-            <ErrorMessage name="nombre"></ErrorMessage>
+            <ErrorMessage component="span" style={{color:'red',fontSize:'10px'}} name="nombre"/>
         </div>
         </div>
         <div className="mb-3">
@@ -38,7 +38,7 @@ export const Registroformcopy = () => {
             type="email" 
             className="form-control" 
             id="email"/>
-            <ErrorMessage name="email"></ErrorMessage>
+            <ErrorMessage component="span" style={{color:'red',fontSize:'10px'}} name="email"/>
         </div>
         <div className="mb-3">
             <Field type="password" 
@@ -46,7 +46,7 @@ export const Registroformcopy = () => {
             placeholder='password' 
             className="form-control" 
             id="password"/>
-            <ErrorMessage name="password"></ErrorMessage>
+            <ErrorMessage component="span" style={{color:'red',fontSize:'10px'}} name="password"/>
         </div>
         <button type="submit" className="btn btn-primary">Submit</button>
     </Form>
