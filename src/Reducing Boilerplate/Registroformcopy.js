@@ -47,8 +47,7 @@ export const Registroformcopy = () => {
             name="password" 
             placeholder='password' 
             className="form-control" 
-            onChange={formik.handleChange} 
-            value={formik.values.password}
+            {...formik.getFieldProps('password')}
             id="password"/>
         </div>
         <button type="submit" className="btn btn-primary">Submit</button>
