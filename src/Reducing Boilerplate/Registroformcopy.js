@@ -21,7 +21,7 @@ export const Registroformcopy = () => {
     console.log(formik.touched)
   return (
     <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
-    <form onSubmit={formik.handleSubmit} style={{width:'50%'}}>
+    <Form  style={{width:'50%'}}>
         <div>
         <div className="mb-3">
             <input placeholder="Nombre" 
