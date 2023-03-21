@@ -3,15 +3,15 @@ import { useFormik } from 'formik'
 
 export const Registroform = () => {
 
-    const validate = (values) =>{
-          let errors = {}
+    // const validate = (values) =>{
+    //       let errors = {}
         
-          if(!values.nombre){
-              errors.nombre = "El nombre es requerido"
-          }
+    //       if(!values.nombre){
+    //           errors.nombre = "El nombre es requerido"
+    //       }
           
-          return errors
-    }
+    //       return errors
+    // }
 
     const formik = useFormik({
         initialValues:{ 
@@ -22,7 +22,10 @@ export const Registroform = () => {
         onSubmit:(values)=>{
             console.log("Datos: ",values)
         },
-        validate
+        //validate,
+        validationSchema: Yup.object({
+            nombre: Yup.string().required('requerido!')
+        })
     })
 
     console.log(formik.touched)
