@@ -34,6 +34,7 @@ export const Registroform = () => {
             name="nombre" 
             onChange={formik.handleChange} 
             value={formik.values.nombre} 
+            onBlur={formik.handleBlur}
             type="text" 
             className="form-control" 
             id="nombre" />
