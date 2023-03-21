@@ -6,3 +6,58 @@
     <li>agregamos la prop onBlur con el valor onBlur={formik.handleBlur} para el seguimiento del campo visitado</li>
     <li>validamos si el input ha sido visitado mediante formik.touched.nombre y si contiene errores</li>
 </ol>
+
+```js
+import { useFormik } from 'formik'
+
+export const Registroform = () => {
+
+    const validate = (values) =>{
+          let errors = {}
+        
+          if(!values.nombre){
+              errors.nombre = "El nombre es requerido"
+          }
+          
+          return errors
+    }
+
+    const formik = useFormik({
+        initialValues:{ 
+            nombre:'',
+            email:'',
+            password:''
+        },
+        onSubmit:(values)=>{
+            console.log("Datos: ",values)
+        },
+        validate
+    })
+
+    console.log(formik.touched)
+  return (
+    <>
+    <form onSubmit={formik.handleSubmit} style={{width:'50%'}}>
+        <div>
+        <div className="mb-3">
+            <input placeholder="Nombre" 
+            name="nombre" 
+            onChange={formik.handleChange} 
+            value={formik.values.nombre} 
+            onBlur={formik.handleBlur} //1)
+            type="text" 
+            className="form-control" 
+            id="nombre" />
+            {formik.touched.nombre && formik.errors.nombre ? <div style={{color:'red',fontSize:'10px'}}>{formik.errors.nombre}</div>: null}
+
+            //2)
+        </div>
+        </div>
+        
+        
+    </form>
+    </>
+  )
+}
+
+```
