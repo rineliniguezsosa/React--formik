@@ -9,13 +9,15 @@ export const Registroform = () => {
         },
         onSubmit:(values)=>{
             console.log("Datos: ",values)
-        }
+        },
+        validate
     })
 
-    console.log(formik.values)
+    console.log(formik.errors)
   return (
     <>
     <form onSubmit={formik.handleSubmit} style={{width:'50%'}}>
+        <div>
         <div className="mb-3">
             <input placeholder="Nombre" 
             name="nombre" 
@@ -24,6 +26,7 @@ export const Registroform = () => {
             type="text" 
             className="form-control" 
             id="nombre" />
+        </div>
         </div>
         <div className="mb-3">
             <input placeholder='email' 
