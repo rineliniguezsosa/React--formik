@@ -5,7 +5,11 @@ export const Registroformcopy = () => {
     const initialValues = {
         nombre:'',
         email:'',
-        password:''
+        password:'',
+        redessociales:{
+            facebook:'',
+            twitter:'',
+        }
     }
 
     const onSubmit = (values)=> {
