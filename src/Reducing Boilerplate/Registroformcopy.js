@@ -19,7 +19,11 @@ export const Registroformcopy = () => {
     const validationSchema = Yup.object({
         nombre: Yup.string().required('requerido!'),
         email:Yup.string().email('Un email valido').required('requerido!'),
-        password:Yup.string().required('requerido!')
+        password:Yup.string().required('requerido!'),
+        redessociales: Yup.object().shape({
+            facebook:Yup.string().email('Un email valido').required('requerido!'),
+            twitter:Yup.string().email('Un email valido').required('requerido!'),
+        })
     })
     
     //console.log()
