@@ -6,10 +6,7 @@ export const Registroformcopy = () => {
         nombre:'',
         email:'',
         password:'',
-        redessociales:{
-            facebook:'',
-            twitter:'',
-        }
+        redessociales:['','']
     }
 
     const onSubmit = (values)=> {
@@ -20,10 +17,10 @@ export const Registroformcopy = () => {
         nombre: Yup.string().required('requerido!'),
         email:Yup.string().email('Un email valido').required('requerido!'),
         password:Yup.string().required('requerido!'),
-        redessociales: Yup.object().shape({
-            facebook:Yup.string().email('Un email valido').required('requerido!'),
-            twitter:Yup.string().email('Un email valido').required('requerido!'),
-        })
+        redessociales: Yup.array().of(
+            Yup.string().email('Un email valido').required('requerido!'),
+            Yup.string().email('Un email valido').required('requerido!')
+        )
     })
     
     //console.log()
@@ -58,19 +55,19 @@ export const Registroformcopy = () => {
         </div>
         <div className="mb-3">
             <Field type="email" 
-            name="redessociales.facebook" 
+            name="redessociales[0]" 
             placeholder='facebook' 
             className="form-control" 
             id="facebook"/>
-            <ErrorMessage component="span" style={{color:'red',fontSize:'10px'}} name="redessociales.facebook"/>
+            <ErrorMessage component="span" style={{color:'red',fontSize:'10px'}} name="redessociales[0]"/>
         </div>
         <div className="mb-3">
             <Field type="email" 
-            name="redessociales.twitter" 
+            name="redessociales[1]" 
             placeholder='twitter' 
             className="form-control" 
             id="twitter"/>
-            <ErrorMessage component="span" style={{color:'red',fontSize:'10px'}} name="redessociales.twitter"/>
+            <ErrorMessage component="span" style={{color:'red',fontSize:'10px'}} name="redessociales[1]"/>
         </div>
         <button type="submit" className="btn btn-primary">Submit</button>
     </Form>
