@@ -58,6 +58,7 @@ export const Registroformcopy = () => {
             name="redessociales[0]" 
             >
                 {formikProps =>{
+                    const {push,remove,form} = formikProps
                     console.log(formikProps)
                     }
 
