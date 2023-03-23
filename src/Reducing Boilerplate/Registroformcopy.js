@@ -54,11 +54,15 @@ export const Registroformcopy = () => {
             <ErrorMessage component="span" style={{color:'red',fontSize:'10px'}} name="password"/>
         </div>
         <div className="mb-3">
-            <Field type="email" 
+            <FieldArray  
             name="redessociales[0]" 
-            placeholder='facebook' 
-            className="form-control" 
-            id="facebook"/>
+            >
+                {formikProps =>{
+                    console.log(formikProps)
+                    }
+
+                }
+            </FieldArray>
             <ErrorMessage component="span" style={{color:'red',fontSize:'10px'}} name="redessociales[0]"/>
         </div>
         <button type="submit" className="btn btn-primary">Submit</button>
