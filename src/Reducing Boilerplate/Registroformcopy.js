@@ -25,7 +25,7 @@ export const Registroformcopy = () => {
     
     //console.log()
   return (
-    <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
+    <Formik validateOnChange={false} validateOnBlur={false} initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
     <Form  style={{width:'50%'}}>
         <div>
         <div className="mb-3">
