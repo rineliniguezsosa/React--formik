@@ -26,6 +26,9 @@ export const Registroformcopy = () => {
     //console.log()
   return (
     <Formik validateOnChange={false} validateOnBlur={false} initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
+    {formik => {
+        console.log(formik)
+     return (
     <Form  style={{width:'50%'}}>
         <div>
         <div className="mb-3">
@@ -86,7 +89,9 @@ export const Registroformcopy = () => {
             <ErrorMessage component="span" style={{color:'red',fontSize:'10px'}} name="redessociales[0]"/>
         </div>
         <button type="submit" className="btn btn-primary">Submit</button>
+        
     </Form>
+    )}}
     </Formik>
   )
 }
