@@ -17,10 +17,10 @@ export const Registroformcopy = () => {
         nombre: Yup.string().required('requerido!'),
         email:Yup.string().email('Un email valido').required('requerido!'),
         password:Yup.string().required('requerido!'),
-        redessociales: Yup.array().of(
-            Yup.string().email('Un email valido').required('requerido!'),
-            Yup.string().email('Un email valido').required('requerido!')
-        )
+        // redessociales: Yup.array().of(
+        //     Yup.string().email('Un email valido').required('requerido!'),
+        //     Yup.string().email('Un email valido').required('requerido!')
+        // )
     })
     
     //console.log()
@@ -55,13 +55,30 @@ export const Registroformcopy = () => {
         </div>
         <div className="mb-3">
             <FieldArray  
-            name="redessociales[0]" 
+            name="redessociales" 
             >
                 {formikProps =>{
                     const {push,remove,form} = formikProps
                     const {values} = form
                     const { redessociales } = values
-                    console.log(formikProps)
+                    console.log("Errores de formulario",form.errors)
+                    return (
+                        <>
+                            {redessociales.map((redessociales,index)=>(
+                                <div key={index} className="mb-3">
+                                     <Field type="email" 
+                                            name={`redessociales[${index}]`}
+                                            placeholder='redes sociales' 
+                                            className="form-control" 
+                                    />
+                                    {index > 0 && (
+                                        <button onClick={()=> remove(index)}>-</button>
+                                    )}
+                                    <button onClick={()=> push('')}>+</button>
+                                </div>
+                            ))} 
+                        </>    
+                    )
                     }
 
                 }
