@@ -25,7 +25,7 @@ export const Registroformcopy = () => {
     
     //console.log()
   return (
-    <Formik validateOnChange={false} validateOnBlur={false} initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
+    <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
     {formik => {
         console.log(formik)
      return (
@@ -64,7 +64,7 @@ export const Registroformcopy = () => {
                     const {push,remove,form} = formikProps
                     const {values} = form
                     const { redessociales } = values
-                    console.log("Errores de formulario",form.errors)
+                    console.log("formulario",formik)
                     return (
                         <>
                             {redessociales.map((redessociales,index)=>(
@@ -88,7 +88,7 @@ export const Registroformcopy = () => {
             </FieldArray>
             <ErrorMessage component="span" style={{color:'red',fontSize:'10px'}} name="redessociales[0]"/>
         </div>
-        <button type="submit" className="btn btn-primary">Submit</button>
+        <button disabled={!formik.isValid} type="submit" className="btn btn-primary">Submit</button>
         
     </Form>
     )}}
