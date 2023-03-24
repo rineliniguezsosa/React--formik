@@ -88,7 +88,7 @@ export const Registroformcopy = () => {
             </FieldArray>
             <ErrorMessage component="span" style={{color:'red',fontSize:'10px'}} name="redessociales[0]"/>
         </div>
-        <button disabled={!formik.isValid} type="submit" className="btn btn-primary">Submit</button>
+        <button disabled={!formik.isValid || formik.isSubmitting} type="submit" className="btn btn-primary">Submit</button>
         
     </Form>
     )}}
