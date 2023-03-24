@@ -9,8 +9,9 @@ export const Registroformcopy = () => {
         redessociales:['']
     }
 
-    const onSubmit = (values)=> {
+    const onSubmit = (values,onSubmitProps)=> {
         console.log("Datos: ",values)
+        onSubmitProps.resetForm() //reset form
     }
 
     const validationSchema = Yup.object({
